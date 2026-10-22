@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="NeuraLearn AI transforms study notes into summaries, quizzes and flashcards." />
+  <title>NeuraLearn AI — Your study superpower</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/app.js"></script>
+</head>
+<body data-theme="dark">
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a href="#top" class="brand" aria-label="NeuraLearn home"><span class="brand-mark">✦</span> Neura<span>Learn</span><small>AI</small></a>
+      <nav id="navigation" class="nav-links" aria-label="Main navigation">
+        <a href="#features">Features</a><a href="#workspace">Workspace</a><a href="#history">History</a>
+      </nav>
+      <div class="nav-actions"><button class="icon-button" id="themeToggle" type="button" aria-label="Toggle light and dark theme">☀</button><button class="btn btn-outline nav-settings" id="settingsBtn" type="button">⚙ Settings</button><button class="icon-button hamburger" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button></div>
+    </div>
+  </header>
+  <main>
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy"><div class="eyebrow"><span class="pulse"></span> YOUR PERSONAL AI STUDY PARTNER</div>
+        <h1 id="hero-title">Study smarter.<br /><span class="gradient-text">Remember forever.</span></h1>
+        <p>Turn messy lecture notes into crystal-clear summaries, interactive quizzes, and memorable flashcards — all in one beautiful workspace.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#workspace">Start learning <span aria-hidden="true">↗</span></a><a class="btn btn-ghost" href="#features">Explore features ↓</a></div>
+        <div class="hero-trust"><div class="avatars"><span>📚</span><span>⚡</span><span>🧠</span></div><span>Built for curious minds & ambitious students</span></div>
+      </div>
+      <div class="hero-visual" aria-label="Preview of study tools">
+        <div class="orb orb-a"></div><div class="orb orb-b"></div>
+        <div class="preview-card preview-main"><div class="preview-top"><span class="purple-dot"></span><span>NeuraLearn Workspace</span><span class="preview-stars">✦ ✦</span></div><span class="mini-label">YOUR STUDY SUMMARY</span><h3>How Neural Networks Learn</h3><p>Neural networks adjust their weights through a process called backpropagation, improving their predictions over time.</p><div class="preview-line long"></div><div class="preview-line medium"></div><div class="preview-line short"></div><div class="preview-footer"><span>✧ AI Generated</span><span>Just now</span></div></div>
+        <div class="float-card float-quiz"><span>✳ Quick Quiz</span><strong>5/5 correct!</strong><div class="tiny-progress"><span></span></div></div>
+        <div class="float-card float-flash"><span class="float-icon">▣</span><div><strong>Smart flashcards</strong><small>Learn. Flip. Remember.</small></div></div>
+      </div>
+    </section>
+    <section id="features" class="container features-section"><div class="section-heading"><span class="overline">EVERYTHING YOU NEED</span><h2>One workspace. <span class="gradient-text">Infinite possibilities.</span></h2><p>Every learning tool you need, working together seamlessly.</p></div>
+      <div class="feature-grid"><article class="feature-card"><div class="feature-icon violet">✧</div><h3>AI-Powered Summaries</h3><p>Turn long notes into clear, bite-sized explanations without losing the important details.</p></article><article class="feature-card"><div class="feature-icon blue">◉</div><h3>Interactive Quizzes</h3><p>Challenge your understanding with five tailored questions and instant feedback.</p></article><article class="feature-card"><div class="feature-icon peach">▣</div><h3>Smart Flashcards</h3><p>Flip through core concepts, mark what you've mastered, and focus on what matters.</p></article></div>
+    </section>
+    <section id="workspace" class="container workspace-section"><div class="section-heading"><span class="overline">YOUR CREATIVE STUDY SPACE</span><h2>Make knowledge <span class="gradient-text">stick.</span></h2><p>Paste notes or enter a topic, choose your preferences, and let AI build your study kit.</p></div>
+      <div class="workspace-grid"><div class="panel input-panel"><div class="panel-heading"><span class="round-icon">✍</span><div><h3>Your study material</h3><p>Start with a topic or your own notes</p></div></div>
+        <label for="notes" class="field-label">Notes or topic</label><textarea id="notes" maxlength="12000" placeholder="e.g. Explain how machine learning works, or paste your lecture notes here..."></textarea><div class="input-foot"><button id="sampleBtn" class="text-button" type="button">✦ Try sample notes</button><span id="charCount">0 / 12,000</span></div>
+        <div class="control-grid"><div><label class="field-label" for="styleSelect">Learning style</label><select id="styleSelect"><option value="exam-focused">Exam-focused</option><option value="simple">Explain like I'm 10</option><option value="detailed">Detailed explanation</option></select></div><div><label class="field-label" for="difficultySelect">Quiz difficulty</label><select id="difficultySelect"><option value="easy">Easy</option><option value="medium" selected>Medium</option><option value="hard">Hard</option></select></div></div>
+        <button id="generateBtn" type="button" class="btn btn-primary generate-btn"><span>✦</span> Generate study kit <span>↗</span></button><p class="fine-print">Your notes are sent to Google's Gemini API only when you generate.</p><div id="status" role="status" aria-live="polite"></div>
+      </div>
+      <div class="panel results-panel"><div class="results-head"><div><span class="overline">AI STUDIO</span><h3>Your learning kit</h3></div><span id="resultBadge" class="status-pill">Awaiting input</span></div>
+        <div class="tabs" role="tablist" aria-label="Generated study materials"><button class="tab active" data-tab="summary" role="tab" aria-selected="true">✧ Summary</button><button class="tab" data-tab="quiz" role="tab" aria-selected="false">◉ Quiz</button><button class="tab" data-tab="flashcards" role="tab" aria-selected="false">▣ Flashcards</button></div>
+        <div id="emptyState" class="empty-state"><div class="empty-illustration">✦</div><h4>Your next breakthrough starts here</h4><p>Enter a topic on the left and hit Generate to see your personalized learning kit.</p><span class="subtle-chip">✦ Powered by Gemini</span></div>
+        <div id="resultContent" class="result-content" hidden></div>
+      </div></div>
+    </section>
+    <section id="history" class="container history-section"><div class="history-title"><div><span class="overline">YOUR LIBRARY</span><h2>Recent learning sessions</h2><p>Pick up right where you left off. Saved locally in your browser.</p></div><div class="history-actions"><input id="historySearch" type="search" aria-label="Search history" placeholder="Search history…" /><button class="btn btn-outline" id="clearHistoryBtn" type="button">Clear history</button></div></div><div id="historyList" class="history-list"></div></section>
+    <section class="container bottom-cta"><div><span class="overline">GROW EVERY DAY</span><h2>Big goals start with <span class="gradient-text">small lessons.</span></h2><p>One topic, one quiz, one flashcard at a time.</p></div><a class="btn btn-primary" href="#workspace">Create a study kit ↗</a></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a href="#top" class="brand"><span class="brand-mark">✦</span> Neura<span>Learn</span><small>AI</small></a><span>© <span id="year"></span> NeuraLearn AI. Made for learners, with curiosity.</span><a href="#top">Back to top ↑</a></div></footer>
+  <dialog id="settingsDialog" class="settings-modal"><form method="dialog" id="settingsForm"><div class="modal-top"><div><span class="overline">CONNECT YOUR AI</span><h2>API settings</h2></div><button class="icon-button" aria-label="Close settings" value="cancel">✕</button></div><p>Get a Gemini API key from <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer">Google AI Studio ↗</a>. Each visitor must supply their own key.</p><label class="field-label" for="apiKey">Your Gemini API key</label><input id="apiKey" type="password" placeholder="Paste your API key" autocomplete="off" /><label class="check-row"><input type="checkbox" id="rememberKey" /> Remember key on this device</label><p class="key-warning">Security note: browser storage is readable by scripts running on this site. For shared/public devices, leave Remember unchecked. Never commit keys to GitHub.</p><div class="modal-buttons"><button id="removeKeyBtn" class="btn btn-ghost" type="button">Forget saved key</button><button class="btn btn-primary" id="saveSettingsBtn" value="save">Save settings</button></div></form></dialog>
+</body></html>
