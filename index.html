@@ -10,14 +10,17 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <script defer src="js/app.js"></script>
+  <script defer src="js/ui.js"></script>
 </head>
 <body data-theme="dark">
+  <a class="skip-link" href="#workspace">Skip to study workspace</a>
+  <div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
   <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
   <header class="site-header" id="top">
     <div class="container nav-wrap">
       <a href="#top" class="brand" aria-label="NeuraLearn home"><span class="brand-mark">✦</span> Neura<span>Learn</span><small>AI</small></a>
       <nav id="navigation" class="nav-links" aria-label="Main navigation">
-        <a href="#features">Features</a><a href="#workspace">Workspace</a><a href="#history">History</a>
+        <a href="#features">Features</a><a href="#how-it-works">How it works</a><a href="#workspace">Workspace</a><a href="#history">History</a>
       </nav>
       <div class="nav-actions"><button class="icon-button" id="themeToggle" type="button" aria-label="Toggle light and dark theme">☀</button><button class="btn btn-outline nav-settings" id="settingsBtn" type="button">⚙ Settings</button><button class="icon-button hamburger" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button></div>
     </div>
@@ -28,9 +31,11 @@
         <h1 id="hero-title">Study smarter.<br /><span class="gradient-text">Remember forever.</span></h1>
         <p>Turn messy lecture notes into crystal-clear summaries, interactive quizzes, and memorable flashcards — all in one beautiful workspace.</p>
         <div class="hero-actions"><a class="btn btn-primary" href="#workspace">Start learning <span aria-hidden="true">↗</span></a><a class="btn btn-ghost" href="#features">Explore features ↓</a></div>
+        <div class="hero-points" aria-label="Platform highlights"><span>✓ Powered by Gemini</span><span>✓ Your own API key</span><span>✓ Learn at your pace</span></div>
         <div class="hero-trust"><div class="avatars"><span>📚</span><span>⚡</span><span>🧠</span></div><span>Built for curious minds & ambitious students</span></div>
       </div>
       <div class="hero-visual" aria-label="Preview of study tools">
+        <div class="visual-grid" aria-hidden="true"></div>
         <div class="orb orb-a"></div><div class="orb orb-b"></div>
         <div class="preview-card preview-main"><div class="preview-top"><span class="purple-dot"></span><span>NeuraLearn Workspace</span><span class="preview-stars">✦ ✦</span></div><span class="mini-label">YOUR STUDY SUMMARY</span><h3>How Neural Networks Learn</h3><p>Neural networks adjust their weights through a process called backpropagation, improving their predictions over time.</p><div class="preview-line long"></div><div class="preview-line medium"></div><div class="preview-line short"></div><div class="preview-footer"><span>✧ AI Generated</span><span>Just now</span></div></div>
         <div class="float-card float-quiz"><span>✳ Quick Quiz</span><strong>5/5 correct!</strong><div class="tiny-progress"><span></span></div></div>
@@ -39,6 +44,14 @@
     </section>
     <section id="features" class="container features-section"><div class="section-heading"><span class="overline">EVERYTHING YOU NEED</span><h2>One workspace. <span class="gradient-text">Infinite possibilities.</span></h2><p>Every learning tool you need, working together seamlessly.</p></div>
       <div class="feature-grid"><article class="feature-card"><div class="feature-icon violet">✧</div><h3>AI-Powered Summaries</h3><p>Turn long notes into clear, bite-sized explanations without losing the important details.</p></article><article class="feature-card"><div class="feature-icon blue">◉</div><h3>Interactive Quizzes</h3><p>Challenge your understanding with five tailored questions and instant feedback.</p></article><article class="feature-card"><div class="feature-icon peach">▣</div><h3>Smart Flashcards</h3><p>Flip through core concepts, mark what you've mastered, and focus on what matters.</p></article></div>
+    </section>
+    <section id="how-it-works" class="container how-section" aria-labelledby="how-title">
+      <div class="section-heading"><span class="overline">FROM NOTES TO KNOWLEDGE</span><h2 id="how-title">Your study session in <span class="gradient-text">three steps.</span></h2><p>Everything happens inside your browser workspace, with your own Gemini API key.</p></div>
+      <div class="steps-grid">
+        <article class="step-card"><span class="step-number">01</span><div class="step-symbol" aria-hidden="true">✎</div><h3>Add what you are learning</h3><p>Paste lecture notes or type a topic. Pick a learning style and quiz difficulty.</p></article>
+        <article class="step-card"><span class="step-number">02</span><div class="step-symbol" aria-hidden="true">✧</div><h3>Generate your study kit</h3><p>Gemini organizes your input into a summary, five-question quiz, and flashcards.</p></article>
+        <article class="step-card"><span class="step-number">03</span><div class="step-symbol" aria-hidden="true">↗</div><h3>Practice and revisit</h3><p>Test your recall, flip flashcards, and reopen past sessions from your library.</p></article>
+      </div>
     </section>
     <section id="workspace" class="container workspace-section"><div class="section-heading"><span class="overline">YOUR CREATIVE STUDY SPACE</span><h2>Make knowledge <span class="gradient-text">stick.</span></h2><p>Paste notes or enter a topic, choose your preferences, and let AI build your study kit.</p></div>
       <div class="workspace-grid"><div class="panel input-panel"><div class="panel-heading"><span class="round-icon">✍</span><div><h3>Your study material</h3><p>Start with a topic or your own notes</p></div></div>

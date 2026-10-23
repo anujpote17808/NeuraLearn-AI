@@ -54,3 +54,14 @@ Import the GitHub repository on [Vercel](https://vercel.com/new), choose **Other
 Commit small stages at least once every two days. Suggested milestones: layout, responsive design, Gemini integration, quiz + flashcards, history, QA, and deployment. Do not fabricate commit history.
 
 **Disclaimer:** An internet connection and valid Gemini API key with sufficient quota are needed for live generation. AI output should be verified for accuracy.
+
+
+## UI refinement milestone (24 October)
+
+- Elevated hero section with animated dashboard preview and platform highlights.
+- Added a three-step “How it works” section.
+- Refined card states, mobile navigation, sticky header, and scroll progress.
+- Added active section links, a keyboard skip link, and reduced-motion support.
+- Kept Gemini API, local history, quiz, and flashcards in the existing `js/app.js`; new progressive enhancements live in `js/ui.js`.
+
+Local preview: `python3 -m http.server 5500`, then visit `http://localhost:5500`.
