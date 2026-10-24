@@ -1,5 +1,5 @@
 # ✦ NeuraLearn AI
-
+live demo = https://neuralai-kappa.vercel.app/
 A responsive, front-end-only **AI Study Assistant** built with **HTML, CSS, and vanilla JavaScript** for Web Technology Continuous Assessment, Assignment 5 (Advanced / 20 marks).
 
 ## Features
