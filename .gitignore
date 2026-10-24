@@ -1,7 +1,9 @@
-.DS_Store
+# Sensitive values and local files
 .env
 .env.*
 !.env.example
+.DS_Store
 node_modules/
-.vscode/
 *.log
+.secret
+*.key

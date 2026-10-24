@@ -44,3 +44,13 @@
 @media(max-width:680px){.nav-links a::after{display:none}.nav-links{gap:0;padding:12px 20px 20px}.nav-links a{display:block;width:100%;padding:13px 7px;border-bottom:1px solid var(--line)}.nav-links a:last-child{border:0}.hero{padding-top:55px}.hero h1{font-size:clamp(37px,10vw,50px)}.hero-points{font-size:11px}.hero-visual{height:335px}.steps-grid{grid-template-columns:1fr}.step-card:last-child{grid-column:auto}.how-section{padding-top:45px;padding-bottom:45px}.step-card{min-height:auto}.float-card{max-width:48%}.nav-actions{gap:7px}}
 @media(max-width:380px){.brand{font-size:17px}.brand-mark{width:29px;height:29px;margin-right:4px}.hero-visual{height:300px}.preview-main{max-width:90%}.float-quiz{right:-5px;top:0}.float-flash{left:-5px;bottom:0}}
 @media(prefers-reduced-motion:reduce){.preview-main,.float-quiz,.float-flash{animation:none}.reveal{opacity:1;transform:none;transition:none}.site-header,.nav-links a::after{transition:none}}
+
+/* Final milestone: learning progress, stability and small-screen refinements */
+.progress-section{padding-top:90px;padding-bottom:30px}
+.progress-panel{max-width:930px;margin:0 auto;padding:30px}
+.score-chart{display:flex;gap:12px;align-items:flex-end;justify-content:space-around;min-height:185px;border-bottom:1px solid var(--border,rgba(150,150,180,.2));padding:20px 4px 0}
+.score-column{display:flex;flex:1;flex-direction:column;align-items:center;justify-content:flex-end;gap:8px;max-width:54px;height:160px;font-size:12px;color:var(--text-muted,#a5a7bc)}
+.score-bar{width:min(100%,35px);min-height:8px;border-radius:8px 8px 2px 2px;background:linear-gradient(180deg,#a593ff,#6357e9);box-shadow:0 0 20px rgba(139,111,255,.18)}
+.score-column span{white-space:nowrap}
+@media (max-width:600px){.progress-section{padding-top:62px}.progress-panel{padding:16px}.score-chart{gap:5px;overflow-x:auto;justify-content:flex-start}.score-column{min-width:30px;font-size:10px}.hero-copy h1{overflow-wrap:anywhere}.modal-buttons{flex-wrap:wrap}}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
