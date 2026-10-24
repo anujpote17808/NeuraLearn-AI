@@ -9,6 +9,7 @@ A responsive, front-end-only **AI Study Assistant** built with **HTML, CSS, and 
 - Exam-focused / simple / detailed learning styles and quiz difficulty
 - Copy, text download, browser text-to-speech
 - Saved study history with open, search and delete (`localStorage`)
+- Quiz score history chart showing up to 12 attempts (`localStorage`)
 - Dark/light switch (persists in `localStorage`)
 - Helpful error messages for empty input, no key, invalid reply, HTTP 401/403/429 and network failure
 - Key input in Settings; never hardcoded in a project file
@@ -30,6 +31,8 @@ This is a **static coursework prototype**. The user's API key is sent directly f
 index.html
 css/style.css
 js/app.js
+js/ui.js
+netlify.toml
 .gitignore
 README.md
 ```
@@ -65,3 +68,31 @@ Commit small stages at least once every two days. Suggested milestones: layout, 
 - Kept Gemini API, local history, quiz, and flashcards in the existing `js/app.js`; new progressive enhancements live in `js/ui.js`.
 
 Local preview: `python3 -m http.server 5500`, then visit `http://localhost:5500`.
+
+
+## Final quality update (26–29 October milestones)
+- Added schema-guided Gemini responses and client-side validation for exactly five quiz questions and at least five flashcards.
+- Added a local-only bar chart of recent quiz scores (12 attempts maximum).
+- Improved saved-history resilience and cross-device mobile styling.
+- Added static hosting config and project verification scripts.
+
+## Full manual test sequence
+1. In Settings, add your *own* working Gemini key from Google AI Studio. Generate study content using the sample notes.
+2. Confirm the summary is visible, Copy and Download work, and Read Aloud speaks if supported.
+3. Complete 5 quiz questions, confirm feedback, results, answers, and a bar in the Progress section. Restart and play again.
+4. Flip at least one flashcard, move between cards and mark one known.
+5. Refresh: history should remain. Click a history entry and confirm the kit loads. Test search and delete with confirmation.
+6. Toggle light/dark, refresh, and verify the choice persists. At a mobile screen width, test the hamburger menu.
+7. Clear your key and verify the missing-key message. Try an invalid key and verify the API failure is friendly. Test empty notes and offline mode.
+8. Inspect the Git diff and ensure no real API key is present, including in old commits.
+9. Open the live Netlify site and repeat the tests.
+
+## Git commands for updating your existing repository
+From your **existing** `~/Downloads/neuralearn-ai` directory, after replacing source files:
+```sh
+git status
+git add index.html css/style.css js/app.js js/ui.js README.md netlify.toml .gitignore
+git commit -m "Complete AI study workflow, quiz analytics and deployment preparation"
+git push origin main
+```
+Never commit a real API key, do not recreate the `.git` directory, and do not claim the site has been deployed until Netlify provides a live link.
